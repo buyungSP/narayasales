@@ -1,0 +1,2456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+<style>
+  body,html,*{margin: 0;box-sizing: border-box;}
+  * {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+      user-select: none;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  }
+  header{
+    width: 100%;
+    padding: 10px 10px;
+    top: 0;
+    margin: 0;
+    background-color: darkgreen;
+  }
+  .body{
+    padding: 2%;
+  }
+  footer{
+    width: 100%;
+    padding: 10px 5% 5% 5%;
+    margin: 0;
+  }
+  button,a{
+    border: none;
+    border-radius: 4px;
+    min-height: 25px;
+    min-width: 25px
+    padding: 5px;
+    background-color: green;
+    color: white
+  }
+  table {
+    border: 1px solid;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  select{
+    background-color: rgba(0,0,0,0);
+    color: white;
+  }
+  #to th,#to td,#tt th,#tt td,#tu th,#tu td{
+    padding: 5px
+  }
+  #to th,#tt th,#tu th{
+    border: 1px solid ;
+  }
+  .db,.tk,.urr{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
+  }
+  #ktkts{
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    background-color:rgba(0,0,0,0);
+    border-radius: 0;
+    color: white
+  }
+  #ktkt{
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    border: 1px solid;
+    background-color:rgba(0,0,0,0);
+    border-radius: 0;
+    color: white
+  }
+  #jll{
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    border: 1px solid;
+    background-color:rgba(0,0,0,0);
+    border-radius: 0;
+    color: white
+  }
+  #btk{
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    border-bottom: 1px solid;
+    background-color:rgba(0,0,0,0);
+    border-radius: 0
+  }
+  .tbody{
+    border:2px solid;
+  }
+  .di{
+  }
+  .tha{
+    border-top:2px solid;
+    border-left:2px solid;
+    border-right:2px solid;
+  }
+  .thal{
+    border-top:2px solid;
+    border-left:2px solid;
+  }
+  .thar{
+    border-top:2px solid;
+    border-right:2px solid;
+  }
+  .thbt{
+    border-bottom:2px solid;
+  }
+  .thb{
+    border-bottom:2px solid;
+    border-right:2px solid;
+    border-left:2px solid;
+  }
+  .thbr{
+    border-bottom:2px solid;
+    border-right:2px solid;
+  }
+  .thbl{
+    border-bottom:2px solid;
+    border-left:2px solid;
+  }
+  .tht{
+    border-left:2px solid;
+    border-right:2px solid;
+  }
+  .thl{
+    border-left:2px solid;
+  }
+  .thr{
+    border-right:2px solid;
+  }
+  .tho{
+    border:none;
+  }
+  .is{
+    text-align: right;
+    border:1px solid;
+  }
+  .iss{
+    text-align: right;
+    border:1px solid;
+    background-color: #8eeef3;
+  }
+  .dis{
+    text-align: right;
+    border:2px solid;
+    background-color: #8eeef3;
+  }
+  .diw{
+    text-align: right;
+    border:2px solid;
+  }
+  .die{
+    text-align: right;
+    border:2px solid;
+  }
+  .ni{
+    text-align: center;
+    border:2px solid;
+  }
+  .nid{
+    text-align: center;
+    border:2px solid;
+  }
+  .ldw{
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    min-height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border:1px solid green;
+    margin: 0 5px 5px 5px;
+  }
+  .ld{
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    min-width: 30px;
+    min-height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border:1px solid green;
+    margin: 0 5px 5px 5px;
+  }
+  #jdd,#jls{
+    text-align: center;
+    width: 100%
+  }
+  #not{
+    border:1px solid black;
+  }
+  thead{
+    background-color: green;
+    color: white;
+  }
+  tbody {
+    width: 50%;
+    counter-reset: row-num;
+  }
+  tbody tr {
+    counter-increment: row-num;
+  }
+  tbody tr #not:first-child::before {
+    content: counter(row-num);
+  }
+  .trr:nth-child(even){
+    background-color: #f2f9ef;
+  }
+  .trr:hover {
+    background-color: #bbf0a4;
+  }
+  .kl{
+    background-color: #139d13;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+  }
+  #ktl{
+    border:1px solid green;
+    padding: 10px;
+    margin: 5px;
+  }
+  .ac{
+    background-color: green;
+    color: white
+  }
+  .mdf{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px;
+    margin: auto;
+    display: block;
+  }
+  .mdfd{
+    position: relative;
+    border-radius: 5px;
+    z-index: 10;
+    height: auto;
+    width: 50%;
+    top: 0;
+    margin: auto;
+    display: block;
+    color: white;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 5% 5% 5%;
+    background-color: #67a467;
+  }
+  .mdff{
+    width: 100%;
+    top: 0;
+    margin: auto;
+    display: block;
+    margin-bottom: 10%;
+    margin-top: 5%;
+  }
+  .mdfi{
+    width: 100%;
+    margin: auto;
+  }
+  .mdfdd{
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .mdfddd{
+    margin: 0 10px 10px 10px;
+    width: 40%;
+    position: relative;
+  }
+  .mdfr{
+    float: right;
+  }
+  .mdfl{
+    float: left;
+  }
+  .mdfb{
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  .car{
+    position: relative;
+    float: right;
+    width: auto;
+    display:inline-block;
+    top: 0
+  }
+  #kt{
+    height:auto;
+    width: 100%;
+    position: relative;
+    display:inline-block;
+    border-bottom: 1px solid white
+  }
+  input[type=text], input[type=password], input[type=email],select {
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .lsl{
+    width: 100%;
+  }
+  .lh{
+    color: white;
+    position: relative;
+    width: 50%;
+    float: left;
+  }
+  #hl{
+    position: fixed;
+    width: 100%;
+    height: auto;
+  }
+  #lgf{
+    width: 30%;
+    position: relative;
+    float: right;
+  }
+  #lgdb{
+    color: white;
+    width: 15%;
+    position: relative;
+    float: right;
+  }
+  #lgi{
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    width: 70%;
+    position: relative;
+    float: left;
+  }
+  #lgil{
+    color: white;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    float: left;
+  }
+  #lgb{
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+  .lgb{
+    width: 100%;
+    margin: auto;
+  }
+  #tkif{
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    padding: 10%;
+    display:block;
+    top:0;
+  }
+  .tkif{
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    margin: auto;
+    background-color:green;
+    color: #fff
+  }
+  #jkk{
+    position: relative;
+    float: right;
+    background-color:rgba(0,0,0,0);
+  }
+  .bulan{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background-color: green
+  }
+  .bulanjudul{
+    position: relative;
+    width: 100%;
+    border:1px solid white;
+    padding: 10px;
+    color: white
+  }
+  .bulanisi{
+    width: 100%;
+    border:1px solid white;
+  }
+  .judulbulan{
+    padding: 10px;
+    color: white;
+    background-color: darkgreen
+  }
+  .isibulan{
+    position: relative;
+    float: left;
+    color: black;
+    width: 100%;
+    padding: 5px;
+    height: 100%;
+    background-color: white;
+    display:none;
+  }
+  .isibulana{
+    display:block;
+    position: relative;
+    padding: 5px;
+    float: left;
+    width: 50%;
+    color: black;
+    background-color: white;
+  }
+  .isibulanb{
+    display:block;
+    padding: 5px;
+    position: relative;
+    text-align: right;
+    float: left;
+    width: 50%;
+    color: black;
+    background-color: white;
+  }
+  .isset{
+    position: relative;
+    float: left;
+    width: 70%;
+    line-height: 50px;
+    border:1px solid;
+    height: 50px;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+  }
+  .isseq{
+    position: relative;
+    float: left;
+    line-height: 50px;
+    width: 10%;
+    border:1px solid;
+    height: 50px;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+  .issed{
+    position: relative;
+    float: left;
+    line-height: 50px;
+    width: 10%;
+    border:1px solid;
+    height: 50px;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+  .isseds{
+    position: relative;
+    float: left;
+    line-height: 50px;
+    width: 10%;
+    border:1px solid;
+    height: 50px;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+  .trre{
+    width: 100%;
+    height: 50px;
+    display:block;
+    text-overflow: ellipsis;
+  }
+  #tosi{
+    position: relative;
+    float: left;
+    width: 50%;
+    text-overflow: ellipsis;
+  }
+  #toss{
+    position: relative;
+    float: left;
+    width: 50%;
+    overflow: auto;
+    text-overflow: ellipsis;
+  }
+  #tose{
+    height: 50px;
+    line-height: 50px;
+    text-overflow: ellipsis;
+  }
+  #tose button{
+    padding: 10px;
+    background-color: white;
+    border:1px solid;
+    color: black;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+  }
+  #tosew{
+    height: 50px;
+    line-height: 50px;
+    text-overflow: ellipsis;
+  }
+  #tosew button{
+    padding: 10px;
+    background-color: white;
+    border:1px solid;
+    color: black;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+  }
+  #stos{
+    background-color: green;
+    color: white;
+    text-overflow: ellipsis;
+  }
+  #ttsa{
+    position: relative;
+    float: left;
+    width: 96%;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid;
+    margin:2%;
+    margin-bottom: 0;
+    line-height: 50px;
+    text-overflow: ellipsis;
+  }
+</style>
+  <script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+  <header>
+    <div id="kt">
+      <button id="ktkts" ><h1>Admin </h1></button>
+      <button class="db" id="ktkt" onclick="kl()">kategori</button>
+      <button class="db" id="ktkt" onclick="tkl()">+</button>
+      <button id="btk" onclick="qw()">keluar</button>
+      <button id="btk" onclick="re()">database</button>
+      <button id="btk" onclick="bln()">bulanan</button>
+      <button id="btk" onclick="urr()">user</button>
+      <button id="btk" onclick="tk()">toko</button>
+      <button id="btk" onclick="tsk()">transaksi</button>
+      <button id="jll"></button>
+      <button class="db" id="btk" onclick="tit()">+ Item</button>
+      <button class="urr" id="btk" onclick="turr()">+ user</button>
+      <button class="tk" id="btk" onclick="ttk()">+ toko</button>
+      <button id="jkk" class="db">Jumlah total rp</button>
+    </div>
+    <div class="car">
+      <input id="car" type="text" name="cari" placeholder="Pencarian">
+    </div>
+    <select id="jl">
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="75">75</option>
+      <option value="100">100</option>
+    </select>
+    <select class="db" id="srr">
+      <option value="1">No ODOO</option>
+      <option value="2">Nama</option>
+      <option value="3">Pcs/Box</option>
+      <option value="4">Harga</option>
+      <option value="5">kategori</option>
+      <option value="6">Upload</option>
+      <option value="7">Update</option>
+    </select>
+  </header>
+    <div class="body"></div> 
+  <script type="text/javascript">
+    const link = "https://pusatwaringmurah.com/naraya/";
+    var dbpp =
+      '<table id="tt">'+
+        '<thead>'+
+          '<tr>'+
+            '<th style="width: 50px">No</th>'+
+            '<th style="width: 50px" onclick="sortTable(0)">No ODOO</th>'+
+            '<th onclick="sortTable(1)">Nama</th>'+
+            '<th style="width: 50px" onclick="sortTable(2)">Pcs / Box</th>'+
+            '<th onclick="sortTable(3)">Harga</th>'+
+            '<th onclick="sortTable(4)">Kategori</th>'+
+            '<th onclick="sortTable(5)">Upload</th>'+
+            '<th onclick="sortTable(6)">Update</th>'+
+            '<th >Menu</th>'+
+          '</tr>'+
+        '</thead>'+
+        '<tbody id="p"></tbody>'+
+      '</table>'+
+      '<footer>'+
+        '<div id="jdd"></div>'+
+      '</footer>';
+    var urrpp =
+      '<table id="tu">'+
+        '<thead>'+
+          '<tr>'+
+            '<th style="width: 50px">No</th>'+
+            '<th styl onclick="sortTable(0)">Status</th>'+
+            '<th onclick="sortTable(1)">Nama</th>'+
+            '<th onclick="sortTable(2)">Email</th>'+
+            '<th style="width: 50px" >Menu</th>'+
+          '</tr>'+
+        '</thead>'+
+        '<tbody id="pu"></tbody>'+
+      '</table>'+
+      '<footer>'+  
+        '<div id="jdd"></div>'+
+      '</footer>';
+    var tkpp = 
+      '<table id="to">'+
+        '<thead>'+
+          '<tr>'+
+            '<th style="width: 50px">No</th>'+
+            '<th onclick="sortTable(1)">Nama</th>'+
+            '<th onclick="sortTable(2)">Alamat</th>'+
+            '<th onclick="sortTable(1)">No telp</th>'+
+            '<th onclick="sortTable(2)">Email</th>'+
+            '<th onclick="sortTable(2)">Source location</th>'+
+            '<th style="width: 50px" >Menu</th>'+
+          '</tr>'+
+        '</thead>'+
+        '<tbody id="pt"></tbody>'+
+      '</table>'+
+      '<footer>'+
+        '<div id="jddq"></div>'+
+      '</footer>';
+    var otkpp =
+      '<table id="to">'+
+        '<thead>'+
+          '<tr>'+
+            '<th style="width: 50px">No</th>'+
+            '<th onclick="sortTable(1)">Toko</th>'+
+            '<th onclick="sortTable(2)">Sales</th>'+
+            '<th onclick="sortTable(1)">Masuk</th>'+
+            '<th onclick="sortTable(2)">selesai</th>'+
+            '<th onclick="sortTable(2)">tempo</th>'+
+            '<th onclick="sortTable(2)">lunas</th>'+
+            '<th onclick="sortTable(2)">status</th>'+
+            '<th onclick="sortTable(2)">tunggakan</th>'+
+            '<th style="width: 50px" >Menu</th>'+
+          '</tr>'+
+        '</thead>'+
+        '<tbody id="opt"></tbody>'+
+      '</table>'+
+      '<footer>'+  
+        '<div id="jddl"></div>'+
+      '</footer>';
+    var wtkpp = 
+      '<table id="to">'+
+        '<thead>'+
+          '<tr>'+
+            '<th style="width: 50px">No</th>'+
+            '<th onclick="sortTable(1)">Toko</th>'+
+            '<th onclick="sortTable(2)">Sales</th>'+
+            '<th onclick="sortTable(1)">Masuk</th>'+
+            '<th onclick="sortTable(2)">selesai</th>'+
+            '<th onclick="sortTable(2)">tempo</th>'+
+            '<th onclick="sortTable(2)">lunas</th>'+
+            '<th onclick="sortTable(2)">status</th>'+
+            '<th onclick="sortTable(2)">total</th>'+
+            '<th style="width: 50px" >Menu</th>'+
+          '</tr>'+
+        '</thead>'+
+        '<tbody id="wpt"></tbody>'+
+      '</table>'+
+      '<footer>' + 
+        '<div id="jdd"></div>'+
+      '</footer>';
+    var tabller = 
+      '<table id="tos">'+
+        '<thead>'+
+          '<tr>'+
+            '<th colspan="2" style="text-align: left;" id="a1">Delevery Address</th>'+
+            '<td></td>'+
+            '<th class="thaf" style="text-align: left;" colspan="5" id="b1">Delevery Note</th>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="2" id="a2">Customer ID : <span></span></td>'+
+            '<td></td>'+
+            '<td class="thalf" colspan="2" id="b2">Doc No :</td>'+
+            '<td id="b2"><span></span></td>'+
+            '<td></td>'+
+            '<td class="tharf"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<th colspan="2" style="text-align: left;" id="a3"></th>'+
+            '<td></td>'+
+            '<td class="thalf" colspan="2" id="b3">Order No :</td>'+
+            '<td id="b3"><span></span></td>'+
+            '<td></td>'+
+            '<td class="tharf"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<th colspan="2" style="text-align: left;" id="a4"></th>'+
+            '<td></td>'+
+            '<td class="thalf" colspan="2" id="b4">Customer PO No :</td>'+
+            '<td class="tharf" colspan="3" id="b4"><span></span></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="3"></td>'+
+            '<td class="thalf" colspan="2"></td>'+
+            '<td class="tharf" colspan="3"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="3"></td>'+
+            '<td class="thalf" colspan="2" id="b5">Date :</td>'+
+            '<td id="b5"><span></span></td>'+
+            '<td></td>'+
+            '<td class="tharf"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="3"></td>'+
+            '<td class="thalf" colspan="2" id="b6">Source Location :</td>'+
+            '<td class="tharf" colspan="3" id="b6"><span></span></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="3"></td>'+
+            '<td class="thblf" colspan="2" id="b7">Sales</td>'+
+            '<td class="thbrf" colspan="3" id="b7"><span></span></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8" style="text-decoration-line: underline" id="c1">Billing Address</td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8" id="c2">Naraya</td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8" id="c3">JL. Karang Singosaren</td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8" id="c4">Banguntapan Bantul</td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td id="c5">55193</td>'+
+            '<td colspan="7"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+        '</thead>'+
+        '<tbody>'+
+          '<tr>'+
+            '<th class="nii" style="width: 50px">No</th>'+
+            '<th class="nii">Item Description</th>'+
+            '<th class="nii">Unit Price</th>'+
+            '<th class="nii">Qty</th>'+
+            '<th class="nii">Total Price</th>'+
+            '<th class="nii">Dics/Item</th>'+
+            '<th class="nii">Disc Program</th>'+
+            '<th class="nii">Price After Disc</th>'+
+          '</tr>'+
+        '</tbody>'+
+        '<tbody id="ept"></tbody>'+
+        '<tbody>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+        '</tbody>'+
+        '<tfoot id="fpt">'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<th class="thaf" colspan="2">Delevered By:</th>'+
+            '<td colspan="2"></td>'+
+            '<th class="thaf" colspan="4">Received By:</th>'+
+          '</tr>'+
+          '<tr>'+
+            '<th class="thtf" colspan="2">Authorized Sinature & Company Stamp</th>'+
+            '<td colspan="2"></td>'+
+            '<th class="thtf" colspan="4">Authorized Sinature & Company Stamp</th>'+
+          '</tr>'+
+          '<tr>'+
+            '<th class="thtf" colspan="2"></th>'+
+            '<td colspan="2"></td>'+
+            '<th class="thtf" colspan="4"></th>'+
+          '</tr>'+
+          '<tr>'+
+            '<th class="thtf" colspan="2"></th>'+
+            '<td colspan="2"></td>'+
+            '<th class="thtf" colspan="4"></th>'+
+          '</tr>'+
+          '<tr>'+
+            '<th class="thtf" colspan="2"></th>'+
+            '<td colspan="2"></td>'+
+            '<th class="thtf" colspan="4"></th>'+
+          '</tr>'+
+          '<tr>'+
+            '<th class="thbf" colspan="2"></th>'+
+            '<td colspan="2"></td>'+
+            '<th class="thblf" ></th>'+
+            '<th class="thbtf" colspan="2" style="text-align: center;">( ............ )</th>'+
+            '<th class="thbrf" ></th>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td colspan="8"></td>'+
+          '</tr>'+
+        '</tfoot>'+
+      '</table>';
+    var login =
+      '<header id="hl">'+
+        '<h2 class="lh">Halaman Masuk</h2>'+
+        '<div id="lgdb">'+
+          '<div id="lgb">'+
+            '<button class="lgb" onclick="logn()" type="submit">Login</button>'+
+          '</div>'+
+          '<div id="lgb">'+
+            '<span class="psw">Forgot <a href="#">password?</a></span>'+
+          '</div>'+
+        '</div>'+
+        '<form id="lgf">'+
+          '<label id="lgil" for="a"><b>Username</b></label>'+
+          '<input class="aks" id="lgi" type="text" placeholder="Email" name="a" required>'+
+          '<label id="lgil" for="b"><b>Password</b></label>'+
+          '<input class="pwds" id="lgi" type="password" placeholder="Password" name="b" required>'+
+        '</form>'+
+      '</header>';
+    var mdf =
+      '<div class="mdf" >'+
+        '<div class="mdfd">'+
+          '<h2 class="mdh"></h2>'+
+          '<form class="mdff" id="edff">'+
+            '<input class="mdfi" type="text" name="a">'+
+          '</form>'+
+          '<div class="mdfdd">'+
+            '<div class="mdfddd mdfl">'+      
+              '<button class="mdfb b">batal</button>'+
+            '</div>'+
+            '<div class="mdfddd mdfr">'+      
+              '<button class="mdfb k">kirim</button>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+    var mdtk =
+      '<div class="mdf" >'+
+        '<div class="mdfd">'+
+          '<h2 class="mdh"></h2>'+
+          '<form class="mdfk" id="edff">'+
+            '<label for="a"><b>Nama toko</b></label>'+
+            '<input class="mdfi" type="text" name="a">'+
+            '<label for="b"><b>Alamat</b></label>'+
+            '<input class="mdfi" type="text" name="b">'+
+            '<label for="c"><b>No telp</b></label>'+
+            '<input class="mdfi" type="text" onkeypress="return ha(event)" name="c">'+
+            '<label for="d"><b>Email</b></label>'+
+            '<input class="mdfi" type="email" name="d">'+
+            '<label for="e"><b>Source location</b></label>'+
+            '<input class="mdfi" type="text" name="e">'+
+          '</form>'+
+          '<div class="mdfdd">'+
+            '<div class="mdfddd mdfl">'+      
+              '<button class="mdfb b">batal</button>'+
+            '</div>'+
+            '<div class="mdfddd mdfr">'+      
+              '<button class="mdfb k">kirim</button>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+    var mdi =
+      '<div class="mdf" >'+
+        '<div class="mdfd">'+
+          '<h2>tambah item</h2>'+
+          '<form class="mdff" id="it">'+
+            '<label for="a">No ODOO</label>'+
+            '<input id="a" class="mdfi" onkeypress="return ha(event)" type="text" name="a">'+
+            '<label for="b">Nama</label>'+
+            '<input id="b" class="mdfi" type="text" name="b">'+
+            '<label for="c">Pcs / Box</label>'+
+            '<input id="c" class="mdfi" onkeypress="return ha(event)" type="text" name="c">'+
+            '<label for="d">Harga</label>'+
+            '<input id="d" class="mdfi" onkeypress="return ha(event)" type="text" name="d">'+
+          '</form>'+
+          '<div class="mdfdd">'+
+            '<div class="mdfddd mdfl">'+      
+              '<button class="mdfb" onclick="tklo()">batal</button>'+
+            '</div>'+
+            '<div class="mdfddd mdfr">'+      
+              '<button class="mdfb" onclick="kit()">kirim</button>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+    var mdu =
+      '<div class="mdf" >'+
+        '<div class="mdfd">'+
+          '<h2>tambah item</h2>'+
+          '<form class="mdff" id="it">'+
+            '<label for="b">Nama</label>'+
+            '<input id="b" class="mdfi" type="text" name="b">'+
+            '<label for="c">Email</label>'+
+            '<input id="c" class="mdfi" type="text" name="c">'+
+            '<label for="d">Password</label>'+
+            '<input id="d" class="mdfi" type="text" name="d">'+
+            '<label for="e">Pcs / Box</label>'+
+            '<select for="it" class="mdfi" name="e">'+
+              '<option value="0">Admin</option>'+
+              '<option value="1">User</option>'+
+            '</select>'+
+          '</form>'+
+          '<div class="mdfdd">'+
+            '<div class="mdfddd mdfl">'+      
+              '<button class="mdfb" onclick="tklo()">batal</button>'+
+            '</div>'+
+            '<div class="mdfddd mdfr">'+      
+              '<button class="mdfb" onclick="kur()">kirim</button>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+    function ha(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+        return false;
+      return true;
+    }
+    function tklo(){ 
+      $('.mdf').remove();
+    }
+    function turr(){
+      $('body').append(mdu);
+      $( "form" ).submit(function(e) {
+        e.preventDefault();  
+        kur();  
+      });
+    }
+    function tit(){
+      $.ajax({
+        url: link + "exel.php?a=3",
+        type: "get",
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          $('body').append(mdi);
+          $('.mdff').append('<label for="lsl">Kategori</label><select name="e" class="lsl" form="it"></select>');
+          for(var i = 0;i<data.length;i++){
+            var lsl = '<option value="' + data[i][0] + '">' + data[i][1] + '</option>';
+            $('.lsl').append(lsl);
+          }
+          $( "form" ).submit(function(e) {
+            e.preventDefault();  
+            kit();  
+          });  
+        },
+        error: error
+      });
+      return false;
+    }
+    function bayar(f){
+      tklo();
+      $('body').append(mdf);
+      $('.mdh').html('Pembayaran');
+      $('.mdfi').attr("onkeypress","return ha(event)");
+      $('.b').attr('onclick',"tklo()");
+      $('.k').attr('id',f.id).attr('onclick',"bay(this)");
+      $( "form" ).submit(function(e) {
+        e.preventDefault();  
+        bay(f);  
+      });  
+    }
+    function tkl(){
+      tklo();
+      $('body').append(mdf);
+      $('.mdh').html('Tambah Kategori');
+      $('.b').attr('onclick',"tklo()");
+      $('.k').attr('onclick',"kkl()");
+      $( "form" ).submit(function(e) {
+        e.preventDefault();  
+        kkl();  
+      });  
+    }
+    function kkl(){
+      $.ajax({
+        url: link + "exel.php?a=4",
+        type: "post",
+        data: $('.mdff').serialize(),
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          if(data == 1){
+              $('#ktl').empty();
+              alert('success');
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function bay(e){
+      var b = e.id.split('_9');
+      $.ajax({
+        url: link + "exel.php?a=31",
+        type: "post",
+        data: {a:$('.mdfi').val(),b:b[0]},
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          $("#" + e.id).html(data);
+          alert('success');
+        },
+        error: error
+      });
+      return false;
+    }
+    function tci(t){
+      var a = new Date(t * 1000);
+      var ms = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var y = a.getFullYear();
+      var mn = ms[a.getMonth()];
+      var d = a.getDate();
+      var h = a.getHours();
+      var m = a.getMinutes();
+      var s = a.getSeconds();
+      if(t==0){
+        var time = null
+      }else{
+        var time = d + ' ' + mn + ' ' + y + ' ' + h + ':' + m + ':' + s ;
+      }
+      return time;
+    }
+    function tim(date) {
+      var dat = new Date();
+      var ti = '';
+      var seconds = Math.floor((dat.getTime() -  date) / 1000);
+      var bl = Math.floor(seconds / 2592000);
+      var hr = Math.floor(seconds / 86400);
+      var jm = Math.floor(seconds / 3600);
+      var mt = Math.floor(seconds / 60);
+      if (bl > 1) {
+        ti = bl + " bulan yang lalu";
+      }else if (hr > 1) {
+        ti = hr + " hari yang lalu";
+      }else if (jm >= 24) {
+        ti = "kemarin";
+      }else if(jm > 1) {
+        ti = jm + " jam yang lalu";
+      }else if (mt > 1) {
+        ti = mt + " menit yang lalu";
+      } else {
+        ti = "baru saja";
+      }
+      if(date==0){
+        var rr = null
+      }else{
+        var rr = ti
+      }
+      return rr;
+    }
+    function fr(angka, prefix){
+      var number_string = angka.replace(/[^,\d]/g, '').toString(),
+      split       = number_string.split(','),
+      sisa        = split[0].length % 3,
+      rupiah        = split[0].substr(0, sisa),
+      ribuan        = split[0].substr(sisa).match(/\d{3}/gi);
+      if(ribuan){
+        separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+      }
+      rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+      return prefix == undefined ? rupiah : (rupiah ? 'Total Rp. ' + rupiah : '');
+    }
+    function fa(e) {
+      var d = -1,
+        a = e ? e.length : 0,
+        i = -1,
+        s = [];
+        while (++d < a) {
+          var r = e[d];
+          if (r[1]) {
+            s[++i] = r;
+          }
+        }
+      return s;
+    }
+    function rd(n) {
+      let u = {};
+      n.forEach(function(i) {
+        if(!u[i]) {
+          u[i] = true;
+        }
+      });
+      return Object.keys(u);
+    }
+    function error(error){
+      console.log(error);
+    }
+    function jlls(b) {
+      $('#jls').remove();
+      $.ajax({
+        url: link + "exel.php?a=7",
+        type: "post",
+        data: {b:b},
+        dataType: "JSON",
+        success: function(data){
+          $('#jdd').html('<div id="jls"></div>');
+          $('#jll').html(data + " Data");
+          var jl = Math.round(data/$('#jl').val());
+          for(var i = 0 ;i<jl;i++){
+            $('#jls').append('<div class="ld" id="' + i + '" onclick="ld(this)">' + (i+1) + '</div>');
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("tt");
+      switching = true;
+      dir = "asc";
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          switch(n){
+            case 0:
+              var te = Number(x.innerHTML) > Number(y.innerHTML);
+              var ta = Number(x.innerHTML) < Number(y.innerHTML);
+              break;
+            case 1:
+              var te = Number(x.innerHTML) > Number(y.innerHTML);
+              var ta = Number(x.innerHTML) < Number(y.innerHTML);
+              break;
+            case 2:
+              var te = x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase();
+              var ta = x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase();
+              break;
+            case 3:
+              var te = Number(x.innerHTML) > Number(y.innerHTML);
+              var ta = Number(x.innerHTML) < Number(y.innerHTML);
+              break;
+            case 4:
+              var te = Number(x.innerHTML) > Number(y.innerHTML);
+              var ta = Number(x.innerHTML) < Number(y.innerHTML);
+              break;
+            case 5:
+              var te = Number(x.innerHTML) > Number(y.innerHTML);
+              var ta = Number(x.innerHTML) < Number(y.innerHTML);
+              break;
+            case 6:
+              var te = Number(x.innerHTML) > Number(y.innerHTML);
+              var ta = Number(x.innerHTML) < Number(y.innerHTML);
+              break;
+          }
+          if (dir == "asc") {
+            if (te) {
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (ta) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount ++;      
+        } else {
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+    function kur(){
+      $.ajax({
+        url: link + "exel.php?a=15",
+        type: "post",
+        data: $('.mdff').serialize(),
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          if(data == 1){
+              alert('success');
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function kit(){
+      var a = $('.mdff').serializeArray();
+      $.ajax({
+        url: link + "exel.php?a=8",
+        type: "post",
+        data: $('.mdff').serialize(),
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          if(data == 1){
+              alert('success');
+          }
+          localStorage.setItem(a[0].value,a[1].value)
+          re()
+        },
+        error: error
+      });
+      return false;
+    }
+    function stt(e){
+      if (e==0) {
+        var sts = "admin";
+      }else{
+        var sts = "user";
+      }
+      return sts;
+    }
+    function logn(){
+      var aks = $('.aks').val();
+      var pwds = $('.pwds').val();
+      if(aks.length=0){
+        alert('Username harus di isi');
+      }else if(pwds.length=0){
+        alert('Password harus di isi');
+      }else{
+        $.ajax({
+          url: link + 'masuk.php',
+          type: 'post',
+          data: $('#lgf').serialize(),
+          dataType: "JSON",
+          success: function(res){
+            if (res['masuk']){
+              var li = ["id","nama","email","password","status"];
+              for (var i = 0; i < li.length; i++) {
+                localStorage.setItem('masuk',true);
+                localStorage.setItem( li[i], res[0][i]);
+              }
+              location.reload();
+            }else if(res['msg']){
+              if(res['msg'].length==2){
+                alert('akun tidak terdaftar');
+              }else{
+                switch(res['msg']){
+                  case 0:
+                    alert('Email salah');
+                    break;
+                  case 1:
+                    alert('Password salah');
+                    break;
+                }
+              }
+            }else{
+              alert('error')
+            }
+          },
+          error: function (jqXHR, exception) {
+            alert('error');
+          }
+        });
+      }
+    }
+    function qw(){
+      localStorage.clear();
+      location.reload();
+    }
+    function ktk(){
+      $.ajax({
+        url: link + "exel.php?a=16",
+        type: "post",
+        data: $('.mdfk').serialize(),
+        dataType: "JSON",
+        cache:false,
+        success: function(data){
+          tklo();
+          if(data == 1){
+              alert('success');
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function jth(e,a){
+      var r = e;
+      var s = parseFloat(a);
+      var tt = r + s;
+      var a = new Date(tt * 1000);
+      var ms = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var y = a.getFullYear();
+      var mn = ms[a.getMonth()];
+      var d = a.getDate();
+      var h = a.getHours();
+      var m = a.getMinutes();
+      var s = a.getSeconds();
+      var time = d + ' ' + mn + ' ' + y ;
+      return time;
+    }
+    function rmu(){
+      $('#tkif').remove()
+    }
+    function optsr(d){
+      $.ajax({
+        url: link + "exel.php?a=27",
+        type: "post",
+        data:{a:d.id},
+        dataType: "JSON",
+        success: function(data){
+          if(data==1){
+            d.remove();
+            $('#' + d.id + '_7').html('baru saja');
+            $('#' + d.id + '_8').html('lunas');
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function jumlahtotal(e){
+      var r = 0;
+      for(var i = 0;i<e;i++){
+        r += parseFloat($('#' + i + '_7').text());
+      }
+      $('#jumlah').html('Rp.' + r);
+      $('#jumlah').attr('jumlah',r);
+      $('#kirim_data').show()
+    }
+    function disclist(j,h,i){
+      tklo();
+      var ss = j + "_" + h + "_" + i;
+      $('body').append(mdf);
+      $('.mdh').html('discount %');
+      $('.b').attr('onclick',"tklo()");
+      $('.mdfi').attr("onkeypress","return ha(event)");
+      $('.k').attr('id',ss);
+      $('.k').attr('onclick',"discitem(this,$('.mdfi').val())");
+      $( "form" ).submit(function(e) {
+        e.preventDefault();  
+        discitem($('.k'),$('.mdfi').val())
+      });  
+    }
+    function discitem(k,m){
+      var kk = k.id.split('_');
+      var j = kk[0];
+      var h = kk[1];
+      var i = kk[2];
+      var d = m;
+      var r = (h * d)/100;
+      var jr = j * r;
+      var jh = ( h * j) - (r * j);
+      var _5 = '#' + i + '_5';
+      var _6 = '#' + i + '_6';
+      var _7 = '#' + i + '_7';
+      if(j==0){
+        $(_5).html(r).parent().attr('diskon',m);
+        $(_6).html(0);
+        $(_7).html(0);
+      }else{
+        $(_5).html(r).parent().attr('diskon',m);
+        $(_6).html(jr);
+        $(_7).html(jh);
+      }
+      tklo();
+    }
+    function optst(t){
+      var a = new Date(t * 1000);
+      var ms = ['01','02','03','04','05','06','07','08','09','10','11','12'];
+      var y = a.getFullYear();
+      var mn = ms[a.getMonth()];
+      var d = a.getDate();
+      if(d.length=1){
+        var dt = '0' + d;
+      }else{
+        var dt = d;
+      }
+      var time = dt + '/' + mn + '/' + y ;
+      return time;
+    }
+    function dtk(a){
+      $.ajax({
+        url: link + "exel.php?a=18",
+        type: "post",
+        data: {a:a},
+        dataType: "JSON",
+        success: function(data){
+          $('.' + a).remove();
+        },
+        error: error
+      });
+      return false;
+    }
+    function dtko(a){
+      $.ajax({
+        url: link + "exel.php?a=37",
+        type: "post",
+        data: {a:a.id},
+        dataType: "JSON",
+        success: function(data){
+          $(a).parent().parent().remove();
+        },
+        error: error
+      });
+      return false;
+    }
+    function ttk(){
+      tklo();
+      $('body').append(mdtk);
+      $('.mdh').html('Tambah toko');
+      $('.b').attr('onclick',"tklo()");
+      $('.k').attr('onclick',"ktk()");
+      $( "form" ).submit(function(e) {
+        e.preventDefault();
+        ktk();
+      });  
+    }
+    function rtk(){
+      alert('jj')
+    }
+    function rma(){
+      $('header a').remove()
+    }
+    function lui(e){
+      itll($('#jl').val(),e.id);
+    }
+
+//database//
+    function xldl() {
+      $.ajax({
+        url: link + "exel.php?a=36",
+        type: "post",
+        dataType: "JSON",
+        success: function(data){
+          console.log(data)
+          for (var i = 0; i < data.length; i++) {
+            localStorage.setItem(data[i][0],data[i][1]);
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function re(){
+      $('.urr,.tk,.edt,.ext,.wtk,#bl').hide();
+      $('.db,#jl,#jll,input:text[name=cari]').show();
+      $('.body').html(dbpp);
+      $('#kirim_data').remove();
+      rma();
+      $('select').change(function(){
+        xll($('#jl').val(),0,$('#srr').val(),$('#car').val());
+      });
+      $('input:text[name=cari]').on('input',function(){
+        var cari = $(this).val();
+        xll($('#jl').val(),0,$('#srr').val(),cari);
+        return false;
+      });
+      xli()
+      xll($('#jl').val(),0,$('#srr').val(),$('#car').val());
+    }
+    function xli() {
+      $.ajax({
+        url: link + "exel.php?a=33",
+        type: "post",
+        dataType: "JSON",
+        success: function(d){
+          var r = 0;
+          for(var i = 0;i<d.length;i++){
+            r += parseFloat(d[i]);
+          }
+          $('#jkk').html(fr(r.toString(),'rp.'));
+        },
+        error: error
+      });
+      return false;
+    }
+    function jll(b,c) {
+      $.ajax({
+        url: link + "exel.php?a=1",
+        type: "post",
+        data: {b:b,c:c},
+        dataType: "JSON",
+        success: listdatabase,
+        error: error
+      });
+      function listdatabase(d){
+        if(c==4){
+          if (localStorage.getItem('kategori')<d[1]) {
+            kk();
+          }
+        }
+      }
+      return false;
+    }
+    function kk(){
+      $.ajax({
+        url: link + "exel.php?a=3",
+        type: "get",
+        dataType: "JSON",
+        success: listlocalstorage,
+        error: error
+      });
+      return false;
+    }
+    function listlocalstorage(d){
+      localStorage.setItem('kategori',d.length);
+      for(var i = 0;i<d.length;i++){
+        localStorage.setItem('kategori'+d[i][0],d[i][1]);
+      }
+    }
+    function xll(a,b,c,d) {
+      var jl = $('#jl').val();
+      var cr = $('#car').val();
+      var sr = $('#srr').val();
+      $("#p").empty();
+      $.ajax({
+        url: link + "exel.php?a=50",
+        type: "post",
+        data:{a:a,b:b,c:c,d:d},
+        dataType: "JSON",
+        success: database,
+        error: error
+      });
+      function database(d){
+        $('#jls').remove();
+        $('#jdd').html('<div id="jls"></div>');
+        $('#jll').html(d[1] + " Data");
+        var r = b - 1;
+        var t = b + 1;
+        var h = '<div class="ldw" id="prev" onclick="xll(' + jl + ',' + r + ',' + sr + ',' + cr + ')">sebelumnya</div><div class="ldw" id="next" onclick="xll(' + jl + ',' + t + ',' + sr + ',' + cr + ')">selanjutnya</div>' ;
+        $('#jls').append(h);
+        if(b==0){
+          $('#prev').remove();
+        }
+        if(b==((d[1]/jl)-1)){
+          $('#next').remove();
+        }
+        for (var i = 0 ; i < d[0].length; i++) {
+          var n = 
+            "<tr class='trr " + d[0][i][0] + "'>"+
+              "<th id='not'></th>"+
+              "<td id='i" + d[0][i][0] + "odoo' onclick='edt(" + d[0][i][0] + ",1,this)'>" + d[0][i][0] + "</td>"+
+              "<td id='i" + d[0][i][0] + "nama' onclick='edt(" + d[0][i][0] + ",2,this)'>" + localStorage.getItem(d[0][i][0]) + "</td>"+
+              "<td id='i" + d[0][i][0] + "pc' onclick='edt(" + d[0][i][0] + ",3,this)'>" + d[0][i][2] + "</td>"+
+              "<td id='i" + d[0][i][0] + "harga' onclick='edt(" + d[0][i][0] + ",4,this)'>" + d[0][i][3] + "</td>"+
+              "<td id='i" + d[0][i][0] + "kategori' onclick='edt(" + d[0][i][0] + ",5,this)'>" + localStorage.getItem('kategori' + d[0][i][4]) + "</td>"+
+              "<td>" + tim(Math.floor(d[0][i][5]*1000)) + " </td>"+
+              "<td >" + tim(Math.floor(d[0][i][6]*1000)) + "</td>"+
+              "<td >" +
+                "<button style='background-color:orange' id='"+ d[0][i][0] + "" + d[0][i][2] + "' onclick='edt(" + d[0][i][0] + ",6,this)'>0</button>" +
+                "<button style='background-color:blue' onclick='tc(" + d[0][i][5] + "," + d[0][i][6] + ")'>!</button>" +
+                "<button style='background-color:red' onclick='dtc(" + d[0][i][0] + ")'>X</button>" +
+              "</td>"+
+            "</tr>";
+            $("#p").append(n);
+          }
+        $('.ld').removeClass('ac');
+        $('#' + b).addClass('ac');
+      }
+      return false;
+    }
+    function edt(e,a,t,v){
+      tklo();
+      switch(a){
+        case 1:
+          $('body').append(mdf);
+          var ttl = 'No ODOO';
+          var f = 0;
+          $('.mdfi').attr("onkeypress","return ha(event)");
+          break;
+        case 2:
+          $('body').append(mdf);
+          var ttl = 'Nama Item';
+          var f = 2;
+          break;
+        case 3:
+          $('body').append(mdf);
+          var ttl = 'Pcs / Box';
+          var f = 1;
+          $('.mdfi').attr("onkeypress","return ha(event)");
+          break;
+        case 4:
+          $('body').append(mdf);
+          var ttl = 'Harga';
+          var f = 0;
+          $('.mdfi').attr("onkeypress","return ha(event)");
+          break;
+        case 5:
+          $('body').append(mdf);
+          $('.mdfi').remove();
+          var ttl = 'Kategori';
+          var f = 0;
+          sdt();
+          break;
+        case 6:
+          var f = 1;
+          ikl(a,e,"#i" + t.id,f);
+          break;
+      }
+      $('.mdh').html(ttl); 
+      $('.b').attr('onclick',"tklo()");
+      $('.k').attr('onclick',"ikl(" + a + "," + e + "," + t.id + "," + f + ")");
+    }
+    function sdt(){
+      $.ajax({
+        url: link + "exel.php?a=3",
+        type: "get",
+        dataType: "JSON",
+        success: function(data){
+          $('.mdff').append('<select name="a" class="lsl mdfi" form="edff"></select>');
+          for(var i = 0;i<data.length;i++){
+            var lsl = '<option value="' + data[i][0] + '">' + data[i][1] + '</option>';
+            $('.lsl').append(lsl);
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function ikl(a,e,t,f){
+      var cc = $('.mdfi').val();
+      if(f==0){
+        var ccs = cc;
+      }else if(f==2){
+        var ccs = cc;
+      }else{
+        var ccs = parseFloat(cc) + parseFloat($(t).text());
+      }
+      if(a==6){
+        var ccs = 0;
+      }
+      $.ajax({
+        url: link + "exel.php?a=10",
+        type: "post",
+        data: {a:a,b:e,c:ccs},
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          $(t).html(ccs);
+          if(a==2){
+            localStorage.setItem(e,ccs)
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function tc(t,u){
+      var ind = 'Upload\n' + tci(t) + '\nUpdate\n' + tci(u);
+      alert(ind);
+    }
+    function dtc(a){
+      $.ajax({
+        url: link + "exel.php?a=34",
+        type: "post",
+        data: {a:a},
+        dataType: "JSON",
+        success: function(data){
+          $('.' + a).remove();
+        },
+        error: error
+      });
+      return false;
+    }
+
+//toko//
+    function tk(){
+      $('.urr,.db,.tk,.edt,.ext,.wtk,#bl').hide();
+      $('.tk,#jl,#jll,input:text[name=cari]').show();
+      $('.body').html(tkpp);
+      $('#kirim_data').remove();
+      rma();
+      $('select').change(function(){
+        tll($('#jl').val(),0,$('#car').val());
+      });
+      $('input:text[name=cari]').on('input',function(){
+        tll($('#jl').val(),0,$(this).val());
+        return false;
+      });
+      tll($('#jl').val(),0,$('#car').val());
+    }
+    function tll(a,b,c) {
+      $("#pt").empty();
+      $.ajax({
+        url: link + "exel.php?a=49",
+        type: "post",
+        data:{a:a,b:b,c:c},
+        dataType: "JSON",
+        success: function(data){
+          var jl = $('#jl').val();
+          var cr = $('#car').val();
+          $('#jddq').html('<div class="ttt" id="jls"></div>');
+          $('#jll').html(data[1] +" Data");
+          var r = b - 1;
+          var t = b + 1;
+          var h = '<div class="ldw" id="prev" onclick="tll(' + jl + ',' + r + ',' + cr + ')">sebelumnya</div><div class="ldw" id="next" onclick="tll(' + jl + ',' + t + ',' + cr + ')">selanjutnya</div>' ;
+          $('.ttt').append(h);
+          if(b==0){
+            $('#prev').remove();
+          }
+          if(b==((data[1]/jl)-1)){
+            $('#next').remove();
+          }
+          for (var i = 0 ; i < data[0].length; i++) {
+            var n = 
+              "<tr class='trr " + data[0][i][0] + "' id='" + data[0][i][0] + "'>"+
+                "<th id='not'></th>"+
+                "<td id='tk" + data[0][i][0] + "" + data[0][i][1] + "' onclick='opt(" + data[0][i][0] + ",1,this)'>" + data[0][i][1] + "</td>"+
+                "<td id='tk" + data[0][i][0] + "" + data[0][i][2] + "' onclick='opt(" + data[0][i][0] + ",2,this)'>" + data[0][i][2] + "</td>"+
+                "<td id='tk" + data[0][i][0] + "" + data[0][i][3] + "' onclick='opt(" + data[0][i][0] + ",3,this)'>" + data[0][i][3] + "</td>"+
+                "<td id='tk" + data[0][i][0] + "" + data[0][i][4] + "' onclick='opt(" + data[0][i][0] + ",4,this)'>" + data[0][i][4] + "</td>"+
+                "<td id='tk" + data[0][i][0] + "" + data[0][i][5] + "' onclick='opt(" + data[0][i][0] + ",5,this)'>" + data[0][i][5] + "</td>"+
+                "<td >" +
+                  "<button style='background-color:blue' id='" + data[0][i][0] + "' onclick='wpts(this)'>!</button>" +
+                  "<button style='background-color:red' onclick='dtk(" + data[0][i][0] + ")'>X</button>" +
+                "</td>"+
+              "</tr>";
+            $("#pt").append(n);
+          }
+          $('.ld').removeClass('ac');
+          $('#' + b).addClass('ac');
+        },
+        error: error
+      });
+      return false;
+    }
+    function wpts(d){
+      $('.body').html(wtkpp);
+      $('.tk,#jll,.urr,.db,.otk,.edt,.ext,input:text[name=cari]').hide();
+      $('#jl,.wtk').show();
+      wwi(d.id,$('#jl').val(),0);
+    }
+    function wwi(a,b,c){
+      $("#wpt").empty();
+      $.ajax({
+        url: link + "exel.php?a=28",
+        type: "post",
+        data:{a:a,b:b,c:c},
+        dataType: "JSON",
+        success: listisibulanan,
+        error: error
+      });
+      return false;
+    }
+    function listisibulanan(data){
+      for (var i = 0 ; i < data.length; i++) {
+        var n = 
+          "<tr class='trr " + data[i][0] + "' id='tr" + data[i][0] + "'>"+
+            "<th id='not'></th>"+
+            "<td>" + data[i][1] + "</td>"+
+            "<td>" + data[i][2] + "</td>"+
+            "<td>" + tci(data[i][3]) + "</td>"+
+            "<td>" + tci(data[i][4]) + "</td>"+
+            "<td>" + jth((86400*14),data[i][3]) + "</td>"+
+            "<td id='" + data[i][0] + "_7'>" + tci(data[i][6]) + "</td>"+
+            "<td id='" + data[i][0] + "_8'>" + tvv(data[i][5]) + "</td>"+
+            "<td>" + data[i][7] + "</td>"+
+            "<td >" +
+              "<button style='background-color:blue' id='" + data[i][0] + "' onclick='wwts(this)'>!</button>" +
+              "<button style='background-color:red' onclick='dtk(" + data[i][0] + ")'>X</button>" +
+            "</td>"+
+          "</tr>";
+        $("#wpt").append(n);
+      }
+    }
+    function wwts(a){
+      $('#tkif').remove();
+      $.ajax({
+        url: link + "exel.php?a=29",
+        type: "post",
+        data:{a:a.id},
+        dataType: "JSON",
+        success: kistranstok,
+        error: error
+      });
+      return false;
+    }
+    function kistranstok(data){
+      var rr = 
+        '<div id="tkif">'+
+          '<div class="tkif stkif"></div>'+
+          '<button onclick="rmu()" class="tkif">ok</button>'
+        '</div>';
+      $('body').append(rr);
+      for (var i = 0; i < data[1].length; i++) {
+        var uu = '<div style="width:100%;position:relative;float:left"><strong>' + localStorage.getItem(data[1][i][0]) + '</strong> : ' + data[1][i][3] + ' x ' + data[1][i][2] + ' = <span id="i_' + i + '" style="float:right;">' + (data[1][i][2]*data[1][i][3]) + '</span></div>';
+        $('.stkif').append(uu);
+      }
+      var r = 0;
+      for(var i = 0;i<data[1].length;i++){
+        r += parseFloat($('#i_' + i).text());
+      }
+      var rr = 
+        '<div style="text-align:right;width:100%">total : ' + r + '<span style="color:#ffacac"> potongan ' + (r-data[0]) + '</span></div>'+
+        '<div style="text-align:right;width:100%">subtotal : ' + data[0] + '</div>';
+      $('.stkif').append(rr)
+    }
+    function opt(e,a,t){
+      tklo();
+      switch(a){
+        case 1:
+          var ttl = 'Nama';
+          break;
+        case 2:
+          var ttl = 'Alamat';
+          break;
+        case 3:
+          var ttl = 'No telp';
+          break;
+        case 4:
+          var ttl = 'Email';
+          break;
+        case 5:
+          var ttl = 'Source Location';
+          break;
+      }
+      $('body').append(mdf);
+      $('.mdh').html(ttl); 
+      $('.b').attr('onclick',"tklo()");
+      $('.k').attr('onclick',"ikus(" + a + "," + e + "," + t.id + ")");
+    }
+    function ikus(a,e,t){
+      var cc = $('.mdfi').val();
+      $.ajax({
+        url: link + "exel.php?a=24",
+        type: "post",
+        data: {a:a,b:e,c:cc},
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          $(t).html(cc);
+        },
+        error: error
+      });
+      return false;
+    }
+    function rrse(a,b) {
+      $('#jls').remove();
+      $.ajax({
+        url: link + "exel.php?a=1",
+        type: "post",
+        data: {c:a},
+        dataType: "JSON",
+        success: function(data){
+          $('#jddq').html('<div class="ttt" id="jls"></div>');
+          $('#jll').html(data[0] + " Data");
+          var r = b - 1;
+          var t = b + 1;
+          var h = '<div class="ldw" id="' + r + '" onclick="lui(this)">sebelumnya</div><div class="ldw" id="' + t + '" onclick="luo(this)">selanjutnya</div>' ;
+          $('.ttt').append(h);
+        },
+        error: error
+      });
+      return false;
+    }
+
+//bulanan//
+    function bln(){
+      $('.urr,.tk,.otk,.edt,.ext,.wtk,#jl,#jll,.db,input:text[name=cari]').hide();
+      $('#bl').show().empty();
+      $('#kirim_data').remove();
+      rma();
+      xlo();
+    }
+    function xlo() {
+      $.ajax({
+        url: link + "exel.php?a=35",
+        type: "post",
+        dataType: "JSON",
+        success: listbulanan,
+        error: error
+      });
+      return false;
+    }
+    function listbulanan(data){
+      var a =[];
+      var b =[];
+      var c =[];
+      for (var i = 0; i < data.length; i++) {
+        a.push(data[i][0]);
+        b.push(data[i][1] + '_' + data[i][0]);
+        c.push([data[i][0],data[i][1],data[i][2],data[i][3]]);
+      }
+      var a1 = rd(a);
+      for (var i = 0; i < a1.length; i++) {
+        $('.body').html('<div class="bulan" id="b' + a1[i] + '"><div class="bulanjudul">Bulan ' + a1[i] + '</div></div>')
+      }
+      var b1 = rd(b).sort();
+      for (var i = 0; i < b1.length; i++) {
+        var b2 = b1[i].split('_');
+        $('#b' + b2[1]).append('<div class="bulanisi" onclick="bulan(this)" id="i' + b2[0] + '"><div class="judulbulan">' + localStorage.getItem(b2[0]) + '</div></div>')
+      }
+      var c1 = fa(c);
+      for (var i = 0; i < c1.length; i++) {
+        $('#b' + c1[i][0]).children('#i' + c1[i][1]).append('<div class="isibulan"><div class="isibulana">' + c1[i][3] + '</div><div class="isibulanb">' + c1[i][2] + ' pcs/box</div></div>');
+      }
+    }
+    function bulan(e){
+      if($(e).children('.isibulan').css('display')=="none"){
+        $(e).children('.isibulan').show()
+      }else{
+        $(e).children('.isibulan').hide()
+      }
+    }
+
+//transfer//
+    function tsk(){
+      $('.urr,.tk,.db,.edt,.ext,.wtk,#bl,input:text[name=cari]').hide();
+      $('#kirim_data').remove();
+      $('.otk,#jl,#jll').show();
+      $('.body').html(otkpp);
+      $('#kirim_data').remove();
+      rma();
+      $('select').change(function(){
+        itll($('#jl').val(),0);
+        return false;
+      });
+      itll($('#jl').val(),0);
+    }
+    function itll(a,b) {
+      $("#opt").empty();
+      var jl = $('#jl').val();
+      $.ajax({
+        url: link + "exel.php?a=51",
+        type: "post",
+        data:{a:a,b:b},
+        dataType: "JSON",
+        success: function(data){
+        $('#jls').remove();
+        $('#jddl').html('<div id="jls"></div>');
+        var r = b - 1;
+        var t = b + 1;
+        var h = '<div class="ldw" id="prev" onclick="itll(' + jl + ',' + r + ')">sebelumnya</div><div class="ldw" id="next" onclick="itll(' + jl + ',' + t + ')">selanjutnya</div>' ;
+        $('#jddl').append(h);
+        if(b==0){
+          $('#prev').remove();
+        }
+        if(b==((data[1]/jl)-1)){
+          $('#next').remove();
+        }
+        $('#jll').html(data[1] + " Data");
+          for (var i = 0 ; i < data[0].length; i++) {
+            var n = 
+              "<tr class='trr " + data[0][i][0] + "' id='tr" + data[0][i][0] + "'>"+
+                "<th id='not'></th>"+
+                "<td>" + data[0][i][1] + "</td>"+
+                "<td>" + data[0][i][2] + "</td>"+
+                "<td>" + tci(data[0][i][3]) + "</td>"+
+                "<td>" + tci(data[0][i][4]) + "</td>"+
+                "<td>" + jth((86400*14),data[0][i][3]) + "</td>"+
+                "<td id='" + data[0][i][0] + "_7'>" + tci(data[0][i][6]) + "</td>"+
+                "<td id='" + data[0][i][0] + "_8'>" + tvv(data[0][i][5]) + "</td>"+
+                "<td onclick='bayar(this)' id='" + data[0][i][0] + "_9'>" + (data[0][i][7]-data[0][i][8]) + "</td>"+
+                "<td >" +
+                  "<button class='sle_" + data[0][i][0] + "' style='background-color:blue' id='" + data[0][i][0] + "|" + data[0][i][1] + "|" + data[0][i][2] + "|" + data[0][i][3] + "|" + data[0][i][4] + "|" + data[0][i][5] + "' onclick='opts(this)'>!</button>" +
+                  "<button style='background-color:red' id='" + data[0][i][0] + "' onclick='dtko(this)'>X</button>" +
+                  "<button class='edd_" + data[0][i][0] + "' style='background-color:orange' id='" + data[0][i][0] + "' onclick='optsq(this)'>E</button>" +
+                  "<button class='lun_" + data[0][i][0] + "' id='" + data[0][i][0] + "' style='background-color:green' onclick='optsr(this)'>ok</button>" +
+                "</td>"+
+              "</tr>";
+            $("#opt").append(n);
+            tvvw(data[0][i][5],data[0][i][0])
+          }
+          $('.ld').removeClass('ac');
+        },
+        error: error
+      });
+      return false;
+    }    
+    function opts(d){
+      $('.body').html(tabller);
+      $('.ext,#tos').show();
+      var a = d.id.split('|');
+      var aw = a[0].split('_');
+      $('#b7 span').html(a[2]);
+      $('#b5 span').html(optst(a[3]));
+      $('#b2 span').html('NRY' + aw[2]);
+      $('#b3 span').html('NRY' + aw[2]);
+      $('.urr,.tk,.db,input:text[name=cari],.otk,#jl,#jll,.wtk,#tosq,#car').hide();
+      $('.edt').show();
+      $("#ept").empty();
+      var dat = [];
+      $.ajax({
+        url: link + "exel.php?a=26",
+        type: "post",
+        cache: false,
+        data:{a:a[0]},
+        dataType: "JSON",
+        success: function(data){
+          $('#a2 span').html(data[1][0]);
+          $('#a3').html(data[1][1]);
+          $('#a4').html(data[1][2]);
+          $('#b6 span').html(data[1][3]);
+          for (var i = 0 ; i < data[0].length; i++) {
+            var n = 
+              "<tr class='trr " + data[0][i][0] + "' id='ex" + a[0] + "_a" + i + "'harga='" + data[0][i][3] + "' nama='" + data[0][i][1] + "' no='" + data[0][i][0] + "' jumlah='" + data[0][i][2] + "'>"+
+                "<th class='isse' id='nots'>" + (1+i) + "</th>"+
+                "<td class='isse' id='" + i + "_1'>" + data[0][i][1] + "</td>"+
+                "<td class='isse' id='" + i + "_2'>" + data[0][i][3] + "</td>"+
+                "<td class='isse' id='" + i + "_3'>" + data[0][i][2] + "</td>"+
+                "<td class='isse' id='" + i + "_4'>" + (data[0][i][2]*data[0][i][3]) + "</td>"+
+                "<td class='isse issw' id='" + i + "_5' onclick='disclist(" + data[0][i][2] + "," + data[0][i][3] + "," + i + ")'></td>"+
+                "<td class='isse' id='" + i + "_6'></td>"+
+                "<td class='isse is7' id='" + i + "_7'></td>"+
+              "</tr>";
+            dat.push([data[0][i][0],data[0][i][2]]);
+            $("#ept").append(n);
+          }
+          var nr = 
+            "<tr class='trr>"+
+              "<th class='isse'></th>"+
+              "<td class='isse'></td>"+
+              "<td class='isse'></td>"+
+              "<td class='isse'></td>"+
+              "<td class='isse'></td>"+
+              "<td class='isse'></td>"+
+              "<td class='isse' onclick='jumlahtotal(" + data[0].length + ")'>subtotal</td>"+
+              "<td class='isse'></td>"+
+              "<td class='isse' no='" + a[0] + "' id='jumlah'></td>"+
+            "</tr>";
+          $("#ept").append(nr);
+          $('#tos thead').css({'background-color':'#fff','color': '#000','border': 'none'});
+          $('.issw').css({'background-color':'#9afbfb'});
+          $('.thaf').css({'border-top':'1px solid','border-left':'1px solid','border-right':'1px solid'});
+          $('.thalf').css({'border-left':'1px solid'});
+          $('.tharf').css({'border-right':'1px solid'});
+          $('.thbtf').css({'border-bottom':'1px solid'});
+          $('.thbf').css({'border-bottom':'1px solid','border-right':'1px solid','border-left':'1px solid'});
+          $('.thbrf').css({'border-bottom':'1px solid','border-right':'1px solid'});
+          $('.thblf').css({'border-bottom':'1px solid','border-left':'1px solid'});
+          $('.thtf').css({'border-left':'1px solid','border-right':'1px solid'});
+          $('.nii').css({'border':'1px solid','text-align': 'center','background-color':'#b4b9b9'});
+          $('.isse').css({'border':'1px solid','text-align': 'center'});
+          $('#nots').css({'color':'black','text-align': 'center'});
+          $('#kt').append('<button class="ext" style="display:none" id="kirim_data">Simpan data</button>');
+          $('#kirim_data').click(function(){
+            var tt = $('#ept').children().length-1;
+            var ediitt = [];
+            for (var i = 0; i < tt; i++) {
+              var not = $('#ept').children('tr:eq(' + i + ')').attr('no');
+              var namat = $('#ept').children('tr:eq(' + i + ')').attr('nama');
+              var jumlaht = $('#ept').children('tr:eq(' + i + ')').attr('jumlah');
+              var hargat = $('#ept').children('tr:eq(' + i + ')').attr('harga');
+              var diskont = $('#ept').children('tr:eq(' + i + ')').attr('diskon');
+              ediitt.push([not,namat,jumlaht,hargat,diskont]);
+            }
+            $.ajax({
+              url: link + "exel.php?a=30",
+              type: "post",
+              data:{a:dat,b:$('#jumlah').attr('no'),c:$('#jumlah').attr('jumlah'),d:ediitt},
+              dataType: "JSON",
+              success: function(data){
+                $('#kirim_data').remove();
+                var table = document.getElementById("tos");
+                var html = table.outerHTML;
+                var url = 'data:application/vnd.ms-excel,' + escape(html); 
+                $('#kt').append('<a class="ext" id="btk" download="export.xls" href="' + url + '" onclick="rma()">Download</a>');
+                return false;
+              },
+              error: error
+            });
+            return false;
+          })
+        },
+        error: error
+      });
+      return false;
+    }
+    function optsq(d){
+      var retttur =
+        '<div id="tosq">'+
+          '<div id="tosi"></div>'+
+          '<div id="toss"></div>'+
+        '</div>';
+      $('.body').html(retttur);
+      $("#ept").empty();
+      $('.ext,#car').show();
+      $("#tosi").append(
+        '<div id="tosw"></div>'+
+        '<div id="tose">'+
+          '<button id="tambh">tambah</button>'+
+          '<button id="simp">Simpan</button>'+
+          '<button id="fatk">Faktur</button>'+
+        '</div>');
+      $('.urr,.tk,.db,.otk,#jl,#jll,.wtk,#tos').hide();
+      $('.edt').show();
+      $('#tambh').click(function tbhm(){
+        $('#tosw').children().children('div').removeAttr('id','stos');
+        var j = $('#tosw').children().length;
+        var o = j + 1;
+        var n = 
+          "<div class='trre'>"+
+            "<div class='isset' id='stos' no='0' harga='0' onclick='poi(this)'>Nama Item</div>"+
+            "<div class='isseq' id='ed" + o + "' onclick='exdt(this)'>0</div>"+
+            "<div class='issed'>" + 
+            "</div>"+
+            "<div class='issed'>" + 
+              "<button style='background-color:red' onclick='etr(this)'>X</button>" +
+            "</div>"+
+          "</div>";
+        $("#tosw").append(n);
+      })
+      $('#simp').click(function(){
+        var t = $('#tosw').children();
+        var w = [];
+        var p = [];
+        var ttl = 0;
+        for (var i = 0; i < t.length; i++) {
+          var r = $('#tosw').children('div:eq(' + i + ')').children('.isset').attr('no'); 
+          var o = $('#tosw').children('div:eq(' + i + ')').children('.isset').attr('harga'); 
+          var u = $('#tosw').children('div:eq(' + i + ')').children('.isseq').html(); 
+          var g = $('#tosw').children('div:eq(' + i + ')').children('.isseds').html(); 
+          var h = localStorage.getItem(r);
+          var disko = (o*g)/100;
+          var potong = o-disko; 
+          p.push(potong*u);
+          w.push([r,h,u,o,g]);
+          ttl += potong *u;
+        }
+        $.ajax({
+          url: link + "exel.php?a=54",
+          type: "post",
+          data:{a:w,b:d.id,c:ttl.toFixed(0)},
+          cache: false,
+          dataType: "JSON",
+          success: function(data){
+            alert('data terkirim');
+          },
+          error:error
+        })
+        return false;
+      })
+      $('#fatk').click(function(){
+        opts(d)
+      })
+      $.ajax({
+        url: link + "exel.php?a=52",
+        type: "post",
+        data:{a:d.id},
+        dataType: "JSON",
+        success: listedit,
+        error: error
+      });
+      return false;
+    }
+    function exdt(e){
+      tklo();
+      $('body').append(mdf);
+      var ttl = 'Pcs / Box';
+      $('.mdfi').attr("onkeypress","return ha(event)");
+      $('.mdh').html(ttl); 
+      $('.b').attr('onclick',"tklo()");
+      $('.k').attr('onclick',"exxs(" + e.id + ")");
+    } 
+    function exxs(e){
+      var f = $('.mdfi').val();
+      $(e).html(f)  
+      tklo();
+    }
+    function listedit(data){
+      for (var i = 0 ; i < data.length; i++) {
+        var n = 
+          "<div class='trre " + data[i][0] + "'>"+
+            "<div class='isset' id='" + data[i][0] + "' no='" + data[i][0] + "' harga='" + data[i][3] + "' onclick='poi(this)'>" + data[i][1] + "</div>"+
+            "<div class='isseq' id='ed" + i + "' onclick='exdt(this)'>" + data[i][2] + "</div>"+
+            "<div class='isseds' style='background-color:orange'>" +  data[i][4] + 
+            "</div>"+
+            "<div class='issed' style='background-color:red' onclick='etr(this)'>X</div>"+
+          "</div>";
+        $("#tosw").append(n);
+      }
+    }
+    function poi(e){
+      $(e).parent().parent().children().children('div').removeAttr('id','stos')
+      $(e).attr('id','stos');
+      $('#toss').height($(window).height()).empty();
+      var cr = $('#car').val();
+      $('input:text[name=cari]').on('input',function(){
+        poit($(this).val());
+        return false;
+      });
+      poit(cr);
+      function poit(a){
+        $("#toss").empty();
+        $.ajax({
+          url: link + "exel.php?a=53",
+          type: "post",
+          data:{a:a},
+          dataType: "JSON",
+          success: database,
+          error: error
+        });
+      }
+      function database(d){
+        for (var i = 0 ; i < d.length; i++) {
+          var n = "<div id='ttsa' onclick='poui(" + e.id + "," + d[i][0] + "," + d[i][1] + ")'>" + localStorage.getItem(d[i][0]) + "</div>";
+          $("#toss").append(n);
+        }
+      }
+      return false;
+    }
+    function poui(d,e,f){
+      $(d).html(localStorage.getItem(e)).attr({'no':e,'harga':f})
+    }
+    function etrr(e){
+      var v = $(e).parent().parent();
+      var w = v.children('div:eq(0)').attr('no');
+      var q = v.children('div:eq(1)').html();
+      $.ajax({
+        url: link + "exel.php?a=55",
+        type: "post",
+        data:{a:w,b:q},
+        dataType: "JSON",
+        success: function(data){
+          $(v).remove()
+        },
+        error: error
+      });
+    }
+    function etr(e){
+      var v = $(e).parent().parent();
+      $(v).remove()
+    }
+    function rre(a,b) {
+      $('#jls').remove();
+      $.ajax({
+        url: link + "exel.php?a=1",
+        type: "post",
+        data: {c:a},
+        dataType: "JSON",
+        success: function(data){
+          $('#jddl').html('<div class="ttt" id="jls"></div>');
+          $('#jll').html(data[0] + " Data");
+          var r = b - 1;
+          var t = b + 1;
+          var h = '<div class="ldw" id="' + r + '" onclick="lui(this)">sebelumnya</div><div class="ldw" id="' + t + '" onclick="lui(this)">selanjutnya</div>' ;
+          $('.ttt').append(h);
+        },
+        error: error
+      });
+      return false;
+    }
+    function tvvw(e,f){
+      if(e==0){
+          $('.lun_' + f).remove();
+      }else if(e==1){
+          $('.sle_' + f).remove();
+      }else if(e==2){
+          $('.lun_' + f).remove();
+      }
+    }
+    function tvv(e){
+      if(e==0){
+          var t = 'terkirim';
+      }else if(e==1){
+          var t = 'selesai';
+      }else if(e==2){
+          var t = 'lunas';
+      }else if(e==3){
+          var t = 'retur';
+      }
+      return t
+    }
+
+//user//
+    function urr(){
+      $('.db,.tk,.edt,.ext,.wtk,#bl').hide();
+      $('.urr,#jl,#jll,input:text[name=cari]').show();
+      $('.body').html(urrpp);
+      $('#kirim_data').remove();
+      rma();
+      $('select').change(function(){
+        ull($('#jl').val(),0,$('#car').val());
+      });
+      $('input:text[name=cari]').on('input',function(){
+        ull($('#jl').val(),0,$(this).val());
+        return false;
+      });
+      ull($('#jl').val(),0,$('#car').val());
+    }
+    function ull(a,b,d) {
+      $("#pu").empty();
+      $.ajax({
+        url: link + "exel.php?a=48",
+        type: "post",
+        data:{a:a,b:b,d:d},
+        dataType: "JSON",
+        success: function(data){
+          $('#jls').remove();
+          $('#jdd').html('<div id="jls"></div>');
+          $('#jll').html(data[1] + " Data");
+          var jl = Math.round(data[1]/$('#jl').val());
+          for(var i = 0 ;i<jl;i++){
+            $('#jls').append('<div class="ld" id="' + i + '" onclick="ld(this)">' + (i+1) + '</div>');
+          }
+          for (var i = 0 ; i < data[0].length; i++) {
+            var n = 
+              "<tr class='trr " + data[0][i][0] + "'>"+
+                "<th id='not'></th>"+
+                "<td id='u" + data[0][i][0] + "" + data[0][i][4] + "' onclick='edtu(" + data[0][i][0] + ",1,this)'>" + stt(data[0][i][4]) + "</td>"+
+                "<td id='u" + data[0][i][0] + "" + data[0][i][1] + "' onclick='edtu(" + data[0][i][0] + ",2,this)'>" + data[0][i][1] + "</td>"+
+                "<td>" + data[0][i][3] + "</td>"+
+                "<td >" +
+                  "<button style='background-color:red' onclick='dtu(" + data[0][i][0] + ")'>X</button>" +
+                "</td>"+
+              "</tr>";
+            $("#pu").append(n);
+          }
+          $('.ld').removeClass('ac');
+          $('#' + b).addClass('ac');
+        },
+        error: error
+      });
+      return false;
+    }
+    function dtu(a){
+      $.ajax({
+        url: link + "exel.php?a=13",
+        type: "post",
+        data: {a:a},
+        dataType: "JSON",
+        success: function(data){
+          $('.' + a).remove();
+        },
+        error: error
+      });
+      return false;
+    }
+    function edtu(e,a,t){
+      tklo();
+      switch(a){
+        case 1:
+          $('body').append(mdf);
+          $('.mdfi').remove();
+          var ttl = 'Status';
+          var data = [[0,'admin'],[1,'user']];
+          $('.mdff').append('<select name="a" class="lsl mdfi" form="edff"></select>');
+          for(var i = 0;i<data.length;i++){
+            var lsl = '<option value="' + data[i][0] + '">' + data[i][1] + '</option>';
+            $('.lsl').append(lsl);
+          }
+          break;
+        case 2:
+          $('body').append(mdf);
+          var ttl = 'Nama';
+          break;
+      }
+      $('.mdh').html(ttl); 
+      $('.b').attr('onclick',"tklo()");
+      $('.k').attr('onclick',"iku(" + a + "," + e + "," + t.id + ")");
+    }
+    function iku(a,e,t){
+      var cc = $('.mdfi').val();
+      $.ajax({
+        url: link + "exel.php?a=14",
+        type: "post",
+        data: {a:a,b:e,c:cc},
+        dataType: "JSON",
+        success: function(data){
+          tklo();
+          $(t).html(cc);
+        },
+        error: error
+      });
+      return false;
+    }
+
+//kategori//
+    function kl(){
+      $.ajax({
+        url: link + "exel.php?a=3",
+        type: "get",
+        dataType: "JSON",
+        success: function(data){
+          $('#kttt').remove();
+          $('#kt').append('<div id="kttt"><div id="ktl"></div><div id="ktls"><button onclick="tkls()">Tutup</button></div></div>');  
+          for(var i = 0;i<data.length;i++){
+            $('#ktl').append('<span class="kl ' + data[i][0] + '" id="' + data[i][0] + '" >' + data[i][1] + ' <button id="' + data[i][0] + '" class="bkl" onclick="dkl(this)">X</button></span>');
+          }
+          if (localStorage.getItem('kategori')<data.length) {
+            kk();
+          }
+        },
+        error: error
+      });
+      return false;
+    }
+    function tkls(){
+      $('#ktl').remove();
+      $('#ktls').remove();
+    }
+    function dkl(e){
+      $.ajax({
+        url: link + "exel.php?a=5",
+        type: "post",
+        data: {a:e.id},
+        dataType: "JSON",
+        success: function(data){
+          $('.' + e.id).remove();
+        },
+        error: error
+      });
+      return false;
+    }
+
+    $( document ).ready(function() {
+      if (localStorage.getItem('masuk')) {
+        xldl();
+        re();
+      }else{
+        $('body').html(login);
+      }
+    });
+  </script>
+</body>
+</html>
